@@ -9,7 +9,7 @@ import {
 import { AVAILABLE_MAPPERS_TYPES, Mappers } from "./Mappers";
 import { IDataValue, Mapper, MapperConfig, MapperType } from "./Typings";
 
-const CURRENT_VERSION = "0.1.1";
+const CURRENT_VERSION = "0.1.2";
 const { Base64, Chunk, FromJSON, HexToFloat, HexToInt, Offset } = Mappers;
 
 /**

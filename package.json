@@ -1,6 +1,6 @@
 {
   "name": "@lab5e/data-mapper-chain",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Simple data mapper library meant to be run in browser to ease data transformation for IoT devices in JS",
   "publishConfig": {
     "access": "public"

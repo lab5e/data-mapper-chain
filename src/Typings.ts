@@ -9,7 +9,7 @@ export interface MapperConfig {
   id: string;
   /** @deprecated */
   ident?: string;
-  params: string | Record<string, unknown>;
+  params: Record<string, unknown>;
 }
 
 export interface Mapper {
@@ -21,5 +21,5 @@ export interface Mapper {
 export interface MapperType {
   id: string;
   value: string;
-  entity: { new (params: string | Record<string, unknown>): Mapper };
+  entity: { new (params: Record<string, unknown>): Mapper };
 }

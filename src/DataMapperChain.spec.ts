@@ -158,11 +158,11 @@ describe("Data mapper chain", () => {
     it("should correctly return mapper initiated with params if type is present", () => {
       const mapperRes = dataMapperChain.createMapperByConfig({
         id: "MOCK",
-        params: "params",
+        params: { customParam: "value" },
       });
 
       expect(mapperRes).not.toBe(false);
-      expect((mapperRes as MapperMock).initParams).toBe("params");
+      expect((mapperRes as MapperMock).initParams).toStrictEqual({ customParam: "value" });
     });
 
     it("should correctly return false when no mapper type found", () => {

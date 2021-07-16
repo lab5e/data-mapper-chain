@@ -5,7 +5,9 @@ const replace = require("@rollup/plugin-replace");
 module.exports = {
   // This function will run for each entry/format/env combination
   rollup(config, opts) {
-    config.external = () => false;
+    if (config.output.format === "umd") {
+      delete config.external;
+    }
     config.plugins = config.plugins.map((p) =>
       p.name === "replace"
         ? replace({

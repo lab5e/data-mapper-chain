@@ -1,4 +1,4 @@
-import * as base64js from "base64-js";
+import { toByteArray } from "base64-js";
 import { Base64Action, Base64DecodeAs } from "../Config";
 import { DataValue, Mapper, MapperConfig, OutputType } from "./../Typings";
 
@@ -47,7 +47,7 @@ export class Base64 implements Mapper {
 
     if (this.action === Base64Action.DECODE) {
       try {
-        const uintArr = base64js.toByteArray(data as string);
+        const uintArr = toByteArray(data as string);
 
         if (this.decodeAs === Base64DecodeAs.STRING) {
           return String.fromCharCode.apply(null, uintArr as any);

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>IFromJSONConfig | @lab5e/data-mapper-chain</title>
+	<title>ChunkConfig | @lab5e/data-mapper-chain</title>
 	<meta name="description" content="Documentation for @lab5e/data-mapper-chain">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">:root {
@@ -2720,30 +2720,30 @@ img {
 			<a href="../classes/DataMapperChain.html" class="tsd-kind-icon">Data<wbr>Mapper<wbr>Chain</a>
 		</li>
 		<li class=" tsd-kind-interface">
-			<a href="DataMapperChainConfig.html" class="tsd-kind-icon">Data<wbr>Mapper<wbr>Chain<wbr>Config</a>
-		</li>
-		<li class=" tsd-kind-interface">
-			<a href="IBase64Config.html" class="tsd-kind-icon">IBase64<wbr>Config</a>
-		</li>
-		<li class=" tsd-kind-interface">
-			<a href="IChunkConfig.html" class="tsd-kind-icon">IChunk<wbr>Config</a>
+			<a href="Base64Config.html" class="tsd-kind-icon">Base64<wbr>Config</a>
 		</li>
 		<li class="current tsd-kind-interface">
-			<a href="IFromJSONConfig.html" class="tsd-kind-icon">IFromJSONConfig</a>
+			<a href="ChunkConfig.html" class="tsd-kind-icon">Chunk<wbr>Config</a>
 			<ul>
 				<li class=" tsd-kind-property tsd-parent-kind-interface">
-					<a href="IFromJSONConfig.html#propertyString" class="tsd-kind-icon">property<wbr>String</a>
+					<a href="ChunkConfig.html#size" class="tsd-kind-icon">size</a>
+				</li>
+				<li class=" tsd-kind-property tsd-parent-kind-interface">
+					<a href="ChunkConfig.html#start" class="tsd-kind-icon">start</a>
 				</li>
 			</ul>
 		</li>
 		<li class=" tsd-kind-interface">
-			<a href="IHexToFloatConfig.html" class="tsd-kind-icon">IHex<wbr>ToFloat<wbr>Config</a>
+			<a href="DataMapperChainConfig.html" class="tsd-kind-icon">Data<wbr>Mapper<wbr>Chain<wbr>Config</a>
 		</li>
 		<li class=" tsd-kind-interface">
-			<a href="IHexToIntConfig.html" class="tsd-kind-icon">IHex<wbr>ToInt<wbr>Config</a>
+			<a href="FromJSONConfig.html" class="tsd-kind-icon">FromJSONConfig</a>
 		</li>
 		<li class=" tsd-kind-interface">
-			<a href="IOffsetConfig.html" class="tsd-kind-icon">IOffset<wbr>Config</a>
+			<a href="HexToFloatConfig.html" class="tsd-kind-icon">Hex<wbr>ToFloat<wbr>Config</a>
+		</li>
+		<li class=" tsd-kind-interface">
+			<a href="HexToIntConfig.html" class="tsd-kind-icon">Hex<wbr>ToInt<wbr>Config</a>
 		</li>
 		<li class=" tsd-kind-interface">
 			<a href="MapDataValue.html" class="tsd-kind-icon">Map<wbr>Data<wbr>Value</a>
@@ -2756,6 +2756,9 @@ img {
 		</li>
 		<li class=" tsd-kind-interface">
 			<a href="MapperType.html" class="tsd-kind-icon">Mapper<wbr>Type</a>
+		</li>
+		<li class=" tsd-kind-interface">
+			<a href="OffsetConfig.html" class="tsd-kind-icon">Offset<wbr>Config</a>
 		</li>
 		<li class=" tsd-kind-type-alias">
 			<a href="../modules.html#IDataValue" class="tsd-kind-icon">IData<wbr>Value</a>
@@ -2780,7 +2783,7 @@ img {
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
 				<li>
-					<span class="target">IFromJSONConfig</span>
+					<span class="target">ChunkConfig</span>
 				</li>
 			</ul>
 		</section>
@@ -2791,7 +2794,8 @@ img {
 					<section class="tsd-index-section ">
 						<h3>Properties</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="IFromJSONConfig.html#propertyString" class="tsd-kind-icon">property<wbr>String</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ChunkConfig.html#size" class="tsd-kind-icon">size</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ChunkConfig.html#start" class="tsd-kind-icon">start</a></li>
 						</ul>
 					</section>
 				</div>
@@ -2800,12 +2804,22 @@ img {
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Properties</h2>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-				<a name="propertyString" class="tsd-anchor"></a>
-				<h3><span class="tsd-flag ts-flagOptional">Optional</span> property<wbr>String</h3>
-				<div class="tsd-signature tsd-kind-icon">property<wbr>String<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<a name="size" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagOptional">Optional</span> size</h3>
+				<div class="tsd-signature tsd-kind-icon">size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/lab5e/data-mapper-chain/blob/14b2649/src/mappers/FromJSON.ts#L4">mappers/FromJSON.ts:4</a></li>
+						<li>Defined in <a href="https://github.com/lab5e/data-mapper-chain/blob/c6489e2/src/mappers/Chunk.ts#L7">mappers/Chunk.ts:7</a></li>
+					</ul>
+				</aside>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+				<a name="start" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagOptional">Optional</span> start</h3>
+				<div class="tsd-signature tsd-kind-icon">start<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/lab5e/data-mapper-chain/blob/c6489e2/src/mappers/Chunk.ts#L5">mappers/Chunk.ts:5</a></li>
 					</ul>
 				</aside>
 			</section>

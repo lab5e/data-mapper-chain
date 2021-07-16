@@ -1,9 +1,9 @@
-export { Base64Config as IBase64Config } from "./mappers/Base64";
-export { ChunkConfig as IChunkConfig } from "./mappers/Chunk";
-export { FromJSONConfig as IFromJSONConfig } from "./mappers/FromJSON";
-export { HexToFloatConfig as IHexToFloatConfig } from "./mappers/HexToFloat";
-export { HexToIntConfig as IHexToIntConfig } from "./mappers/HexToInt";
-export { OffsetConfig as IOffsetConfig } from "./mappers/Offset";
+export { Base64Config } from "./mappers/Base64";
+export { ChunkConfig } from "./mappers/Chunk";
+export { FromJSONConfig } from "./mappers/FromJSON";
+export { HexToFloatConfig } from "./mappers/HexToFloat";
+export { HexToIntConfig } from "./mappers/HexToInt";
+export { OffsetConfig } from "./mappers/Offset";
 
 /**
  * Endianness used as config parameter

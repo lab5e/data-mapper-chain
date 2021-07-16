@@ -5,7 +5,7 @@ Supports encoding and decoding of base64 input.
 ## Configuration
 
 ```ts
-interface IBase64Config {
+interface Base64Config {
   action?: Base64Action;
   decodeAs?: Base64DecodeAs;
 }
@@ -20,7 +20,7 @@ enum Base64DecodeAs {
   HEXSTRING = "hexstring",
 }
 
-const base64Mapper = Mappers.Base64(configuration: IBase64Config);
+const base64Mapper = Mappers.Base64(configuration: Base64Config);
 ```
 
 ## Example

@@ -1,10 +1,10 @@
 import {
-  IBase64Config,
-  IChunkConfig,
-  IFromJSONConfig,
-  IHexToFloatConfig,
-  IHexToIntConfig,
-  IOffsetConfig,
+  Base64Config,
+  ChunkConfig,
+  FromJSONConfig,
+  HexToFloatConfig,
+  HexToIntConfig,
+  OffsetConfig,
 } from "./Config";
 import { AVAILABLE_MAPPERS_TYPES, Mappers } from "./Mappers";
 import { IDataValue, Mapper, MapperConfig, MapperType } from "./Typings";
@@ -170,7 +170,7 @@ export class DataMapperChain {
    * Add a Base64 mapper
    * @param base64Config Configuration for the Base64 mapper
    */
-  base64(base64Config: IBase64Config = {}): DataMapperChain {
+  base64(base64Config: Base64Config = {}): DataMapperChain {
     this.addMapper(new Base64(base64Config));
     return this;
   }
@@ -179,7 +179,7 @@ export class DataMapperChain {
    * Add a Chunk mapper
    * @param chunkConfig Configuration for the Chunk mapper
    */
-  chunk(chunkConfig: IChunkConfig = {}): DataMapperChain {
+  chunk(chunkConfig: ChunkConfig = {}): DataMapperChain {
     this.addMapper(new Chunk(chunkConfig));
     return this;
   }
@@ -188,7 +188,7 @@ export class DataMapperChain {
    * Add a FromJSON mapper
    * @param fromJsonConfig Configuration for the FromJSON mapper
    */
-  fromJson(fromJsonConfig: IFromJSONConfig = {}): DataMapperChain {
+  fromJson(fromJsonConfig: FromJSONConfig = {}): DataMapperChain {
     this.addMapper(new FromJSON(fromJsonConfig));
     return this;
   }
@@ -197,7 +197,7 @@ export class DataMapperChain {
    * Add a HexToFloat mapper
    * @param hexToFloatConfig Configuration for the HexToFloat mapper
    */
-  hexToFloat(hexToFloatConfig: IHexToFloatConfig = {}): DataMapperChain {
+  hexToFloat(hexToFloatConfig: HexToFloatConfig = {}): DataMapperChain {
     this.addMapper(new HexToFloat(hexToFloatConfig));
     return this;
   }
@@ -206,7 +206,7 @@ export class DataMapperChain {
    * Add a HexToInt mapper
    * @param hexToIntConfig Configuration for the HexToInt mapper
    */
-  hexToInt(hexToIntConfig: IHexToIntConfig = {}): DataMapperChain {
+  hexToInt(hexToIntConfig: HexToIntConfig = {}): DataMapperChain {
     this.addMapper(new HexToInt(hexToIntConfig));
     return this;
   }
@@ -215,7 +215,7 @@ export class DataMapperChain {
    * Add a Offset mapper
    * @param offsetConfig Configuration for the Offset mapper
    */
-  offset(offsetConfig: IOffsetConfig = {}): DataMapperChain {
+  offset(offsetConfig: OffsetConfig = {}): DataMapperChain {
     this.addMapper(new Offset(offsetConfig));
     return this;
   }

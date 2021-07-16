@@ -5,7 +5,7 @@ Take a chunk of the input and return it.
 ## Configuration
 
 ```ts
-interface IChunkConfig {
+interface ChunkConfig {
   start?: string | number;
   size?: string | number;
 }

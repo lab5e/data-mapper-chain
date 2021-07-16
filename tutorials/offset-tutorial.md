@@ -5,7 +5,7 @@ Take an input and offset it by a positive or negative value.
 ## Configuration
 
 ```ts
-interface IOffsetConfig {
+interface OffsetConfig {
   offset?: number | string;
 }
 ```

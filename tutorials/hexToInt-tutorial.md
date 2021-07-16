@@ -5,7 +5,7 @@ Take a hex input and convert it to an int.
 ## Configuration
 
 ```ts
-interface IHexToIntConfig {
+interface HexToIntConfig {
   endianness?: Endianness;
   signed?: boolean;
 }

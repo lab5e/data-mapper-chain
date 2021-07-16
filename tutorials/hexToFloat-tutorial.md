@@ -5,7 +5,7 @@ Take a hex input and convert it to a float.
 ## Configuration
 
 ```ts
-interface IHexToFloatConfig {
+interface HexToFloatConfig {
   endianness?: Endianness;
 }
 

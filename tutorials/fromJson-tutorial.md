@@ -5,7 +5,7 @@ Traverse a JSON struct and return value.
 ## Configuration
 
 ```ts
-interface IFromJSONConfig {
+interface FromJSONConfig {
   propertyString?: string;
 }
 ```

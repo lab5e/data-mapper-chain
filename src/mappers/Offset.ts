@@ -1,4 +1,4 @@
-import { IDataValue, Mapper, MapperConfig, IOutputType } from "./../Typings";
+import { DataValue, Mapper, MapperConfig, OutputType } from "./../Typings";
 
 export interface OffsetConfig {
   offset?: number | string;
@@ -12,7 +12,7 @@ export class Offset implements Mapper {
   static description = "Offset number";
 
   name = "Offset";
-  outputType: IOutputType = IOutputType.number;
+  outputType: OutputType = OutputType.number;
 
   offset = 0;
 
@@ -29,7 +29,7 @@ export class Offset implements Mapper {
     };
   }
 
-  transform(data: IDataValue): IDataValue {
+  transform(data: DataValue): DataValue {
     let parsedNumber: number;
 
     if (typeof data !== "number") {

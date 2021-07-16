@@ -1,6 +1,6 @@
 import { DataMapperChain } from "./DataMapperChain";
 import { Mappers } from "./Mappers";
-import { IDataValue, Mapper, MapperConfig, IOutputType } from "./Typings";
+import { DataValue, Mapper, MapperConfig, OutputType } from "./Typings";
 
 const { Base64, Chunk, FromJSON, HexToFloat, HexToInt, Offset } = Mappers;
 
@@ -9,13 +9,13 @@ const { version } = require("../package.json");
 
 class MapperMock implements Mapper {
   initParams: any = {};
-  outputType: IOutputType = IOutputType.number;
+  outputType: OutputType = OutputType.number;
 
   constructor(params = {}) {
     this.initParams = params;
   }
 
-  transform(): IDataValue {
+  transform(): DataValue {
     return "MOCK WAS HERE";
   }
 

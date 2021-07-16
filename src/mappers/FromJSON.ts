@@ -1,4 +1,4 @@
-import { IDataValue, Mapper, MapperConfig, IOutputType } from "./../Typings";
+import { DataValue, Mapper, MapperConfig, OutputType } from "./../Typings";
 
 export interface FromJSONConfig {
   propertyString?: string;
@@ -12,7 +12,7 @@ export class FromJSON implements Mapper {
   static description = "JSON";
 
   name = "JSON";
-  outputType: IOutputType = IOutputType.string;
+  outputType: OutputType = OutputType.string;
 
   propertyString = "";
 
@@ -29,7 +29,7 @@ export class FromJSON implements Mapper {
     };
   }
 
-  transform(data: IDataValue): IDataValue {
+  transform(data: DataValue): DataValue {
     if (!data) {
       return data;
     }

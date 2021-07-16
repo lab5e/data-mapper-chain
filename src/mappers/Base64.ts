@@ -1,6 +1,6 @@
 import * as base64js from "base64-js";
 import { Base64Action, Base64DecodeAs } from "../Config";
-import { IDataValue, Mapper, MapperConfig, IOutputType } from "./../Typings";
+import { DataValue, Mapper, MapperConfig, OutputType } from "./../Typings";
 
 export interface Base64Config {
   action?: Base64Action;
@@ -15,7 +15,7 @@ export class Base64 implements Mapper {
   static description = "Base64";
 
   name = "Base64";
-  outputType: IOutputType = IOutputType.string;
+  outputType: OutputType = OutputType.string;
 
   action: Base64Action = Base64Action.DECODE;
   decodeAs: Base64DecodeAs = Base64DecodeAs.STRING;
@@ -38,7 +38,7 @@ export class Base64 implements Mapper {
     };
   }
 
-  transform(data: IDataValue): IDataValue {
+  transform(data: DataValue): DataValue {
     if (!data) {
       return data;
     }

@@ -1,5 +1,5 @@
 import { Endianness } from "../Config";
-import { IDataValue, Mapper, MapperConfig, IOutputType } from "./../Typings";
+import { DataValue, Mapper, MapperConfig, OutputType } from "./../Typings";
 
 export interface HexToIntConfig {
   endianness?: Endianness;
@@ -14,7 +14,7 @@ export class HexToInt implements Mapper {
   static description = "Hex to int";
 
   name = "Hex to int";
-  outputType: IOutputType = IOutputType.number;
+  outputType: OutputType = OutputType.number;
 
   endianness: Endianness = Endianness.BIG_ENDIAN;
   signed = false;
@@ -35,7 +35,7 @@ export class HexToInt implements Mapper {
     };
   }
 
-  transform(data: IDataValue): IDataValue {
+  transform(data: DataValue): DataValue {
     if (!data) {
       return 0;
     }

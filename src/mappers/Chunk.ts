@@ -1,4 +1,4 @@
-import { IDataValue, Mapper, MapperConfig, IOutputType } from "./../Typings";
+import { DataValue, Mapper, MapperConfig, OutputType } from "./../Typings";
 
 export interface ChunkConfig {
   // Start-index of chunk
@@ -15,7 +15,7 @@ export class Chunk implements Mapper {
   static description = "Chunk";
 
   name = "Chunk";
-  outputType: IOutputType = IOutputType.string;
+  outputType: OutputType = OutputType.string;
 
   start = 0;
   size = 4;
@@ -35,7 +35,7 @@ export class Chunk implements Mapper {
     };
   }
 
-  transform(data: IDataValue): IDataValue {
+  transform(data: DataValue): DataValue {
     return data.toString().substring(this.start, this.start + this.size);
   }
 }

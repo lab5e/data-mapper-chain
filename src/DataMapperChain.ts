@@ -7,7 +7,7 @@ import {
   OffsetConfig,
 } from "./Config";
 import { AVAILABLE_MAPPERS_TYPES, Mappers } from "./Mappers";
-import { IDataValue, Mapper, MapperConfig, MapperType } from "./Typings";
+import { DataValue, Mapper, MapperConfig, MapperType } from "./Typings";
 
 const CURRENT_VERSION = "0.1.2";
 const { Base64, Chunk, FromJSON, HexToFloat, HexToInt, Offset } = Mappers;
@@ -46,7 +46,7 @@ export interface MapDataValue {
  */
 export class DataMapperChain {
   mappers: Mapper[] = [];
-  initialValue: IDataValue = "";
+  initialValue: DataValue = "";
   name = "";
   meta: object = {};
 
@@ -158,7 +158,7 @@ export class DataMapperChain {
    * Uses the configured mappers for the DataMapperChain and maps the given data through the mappers.
    * @param value Data to be mapped through the configured mappers
    */
-  mapData(value: IDataValue = ""): IDataValue {
+  mapData(value: DataValue = ""): DataValue {
     this.initialValue = value;
 
     return this.mappers.reduce((curr, mapper) => {

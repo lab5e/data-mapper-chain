@@ -1,5 +1,5 @@
-export type IDataValue = string | number;
-export enum IOutputType {
+export type DataValue = string | number;
+export enum OutputType {
   "string",
   "number",
   "array",
@@ -13,8 +13,8 @@ export interface MapperConfig {
 }
 
 export interface Mapper {
-  outputType: IOutputType;
-  transform(data: IDataValue): IDataValue;
+  outputType: OutputType;
+  transform(data: DataValue): DataValue;
   config(): MapperConfig;
 }
 

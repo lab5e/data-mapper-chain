@@ -5,8 +5,8 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "dist/data-mapper-chain.umd.production.min.js",
-  "module": "dist/data-mapper-chain.esm.js",
+  "main": "dist/dmc.umd.production.min.js",
+  "module": "dist/dmc.esm.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist"

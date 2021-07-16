@@ -1,0 +1,72 @@
+{
+  "name": "@lab5e/data-mapper-chain",
+  "version": "0.1.0",
+  "description": "Simple data mapper library meant to be run in browser to ease data transformation for IoT devices in JS",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "dist/data-mapper-chain.umd.production.min.js",
+  "module": "dist/data-mapper-chain.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lab5e/data-mapper-chain.git"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build --format cjs,esm,umd --name dmc -i src/index.ts",
+    "test": "tsdx lint src && tsdx test",
+    "test:watch": "tsdx test --watch",
+    "test:coverage": "tsdx test --coverage",
+    "doc": "typedoc --out docs --theme minimal src/index.ts --exclude \"**/*.spec.ts\" --readme DOC.md",
+    "lint": "tsdx lint",
+    "prepare": "npm run build",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
+  },
+  "keywords": [
+    "iot",
+    "data",
+    "transform"
+  ],
+  "author": "Per Kristian Kummermo",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@types/base64-js": "1.2.5",
+    "base64-js": "1.3.0"
+  },
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^4.11.0",
+    "@types/jest": "^25.2.3",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^2.34.0",
+    "husky": "^6.0.0",
+    "jest": "^27.0.6",
+    "msw": "^0.29.0",
+    "node-fetch": "^2.6.1",
+    "np": "^7.5.0",
+    "size-limit": "^4.11.0",
+    "ts-jest": "^27.0.2",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.2.0",
+    "typedoc": "^0.21.4",
+    "typescript": "^4.2.4"
+  },
+  "size-limit": [
+    {
+      "path": "dist/dmc.cjs.production.min.js",
+      "limit": "3 kB"
+    },
+    {
+      "path": "dist/dmc.esm.js",
+      "limit": "3 kB"
+    },
+    {
+      "path": "dist/dmc.umd.production.min.js",
+      "limit": "3 kB"
+    }
+  ]
+}
